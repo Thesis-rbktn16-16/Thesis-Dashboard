@@ -89,25 +89,25 @@ const pieChartData = [
 export default function Charts(props) {
   var theme = useTheme();
 
-  var [activeIndex, setActiveIndexId] = useState(0);
-  const [Stations, setStations] = useState([]);
+  // var [activeIndex, setActiveIndexId] = useState(0);
+  // const [Stations, setStations] = useState([]);
   // local
-  var stationStat = [];
+  // var stationStat = [];
 
-  const getAllStations = () => {
-    axios
-      .get(`https://bycyclethesis.herokuapp.com/station`)
-      .then((response) => {
-        setStations(response.data);
-      })
-      .catch((err) => {
-        console.log("err", err);
-      });
-  };
+  // const getAllStations = () => {
+  //   axios
+  //     .get(`https://bycyclethesis.herokuapp.com/station`)
+  //     .then((response) => {
+  //       setStations(response.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log("err", err);
+  //     });
+  // };
 
-  useEffect(() => {
-    getAllStations();
-  }, []);
+  // useEffect(() => {
+  //   getAllStations();
+  // }, []);
 
   const Reload = () => {
     window.location.reload();
@@ -145,7 +145,7 @@ export default function Charts(props) {
               <LineChart
                 width={500}
                 height={300}
-                data={Stations}
+                data={lineChartData}
                 margin={{
                   top: 5,
                   right: 30,

@@ -9,8 +9,6 @@ import {
   TextField,
   Fade,
 } from "@material-ui/core";
-import { Link } from "react-router-dom";
-
 import classnames from "classnames";
 import axios from "axios";
 // testing auth with redux
@@ -94,7 +92,6 @@ function Login({ history }) {
         LoginAdmin,
       })
       .then((adminLogged) => {
-        console.log("ADMIN IN", adminLogged.data.Username.length);
         setAdminLog(true);
         localStorage.setItem("auth", adminLogged.data.Username);
       })
@@ -102,7 +99,6 @@ function Login({ history }) {
         console.log(err);
       });
   };
-  console.log(adminLoggedIn);
   return (
     <Grid container className={classes.container}>
       <div className={classes.logotypeContainer}>
@@ -139,9 +135,12 @@ function Login({ history }) {
                 fullWidth
               />
               <TextField
-                id="password"
+                hintText="At least 8 characters"
+                placeholder="Enter your password"
+                errorText="Your password is too short"
+                type="password"
                 name="LoginPassword"
-                InputProps={{
+                inputprops={{
                   classes: {
                     underline: classes.textFieldUnderline,
                     input: classes.textField,
@@ -150,8 +149,8 @@ function Login({ history }) {
                 // value={passwordValue}
                 onChange={handleLogin}
                 margin="normal"
-                placeholder="Password"
-                type="password"
+                // placeholder="Password"
+                // type="password"
                 fullWidth
               />
               <div className={classes.formButtons}>
@@ -163,23 +162,12 @@ function Login({ history }) {
                     //   LoginAdmin.User.length === 0 ||
                     //   LoginAdmin.Password.length === 0
                     // }
-                    onClick={
-                      () => {
-                        checkAdmin();
-                        if (adminLoggedIn) {
-                          history.push("/app/dashboard");
-                        }
+                    onClick={() => {
+                      checkAdmin();
+                      if (adminLoggedIn) {
+                        history.push("/app/dashboard");
                       }
-                      //   // () =>
-                      //   //   loginUser(
-                      //   //     userDispatch,
-                      //   //     loginValue,
-                      //   //     passwordValue,
-                      //   //     props.history,
-                      //   //     setIsLoading,
-                      //   //     setError,
-                      //   //   )
-                    }
+                    }}
                     variant="contained"
                     color="#FFBF00"
                     size="large"
@@ -238,14 +226,17 @@ function Login({ history }) {
                     input: classes.textField,
                   },
                 }}
-                // value={loginValue}
                 onChange={handleRegister}
                 margin="normal"
                 placeholder="Email Adress"
                 type="email"
                 fullWidth
               />
+
               <TextField
+                hintText="At least 8 characters"
+                placeholder="Enter your password"
+                errorText="Your password is too short"
                 id="password"
                 name="Password"
                 InputProps={{
@@ -254,13 +245,11 @@ function Login({ history }) {
                     input: classes.textField,
                   },
                 }}
-                // value={passwordValue}
                 onChange={handleRegister}
                 margin="normal"
-                placeholder="Password"
-                type="password"
                 fullWidth
               />
+
               <div className={classes.creatingButtonContainer}>
                 {isLoading ? (
                   <CircularProgress size={26} />

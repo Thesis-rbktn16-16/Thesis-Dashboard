@@ -288,9 +288,7 @@ const Header = ({ classes, isSidebarOpened, toggleSidebar, ...props ,history}) =
           <Typography
             className={classes.profileMenuLink}
             color="primary"
-            onClick={() => {
-              console.log('hey');
-            }}
+            
           >
             Sign Out
           </Typography>
