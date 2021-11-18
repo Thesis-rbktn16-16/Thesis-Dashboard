@@ -18,13 +18,41 @@ const BasicMap = withScriptjs(
         lng: parseFloat(10),
       }}
     >
-      <Marker position={{ lat: 36.78825, lng: 10 }} />
-      <Marker position={{ lat: 34.70075, lng: 9.1 }} />
-      <Marker position={{ lat: 36.78825, lng: 10.2324 }} />
-      <Marker position={{ lat: 36.77725, lng: 10.2324 }} />
-      <Marker position={{ lat: 36.64725, lng: 10.2324 }} />
-      <Marker position={{ lat: 36.86625, lng: 10.2324 }} />
-      <Marker position={{ lat: 36.06555, lng: 10.2324 }} />
+      <Marker
+        position={{ lat: 36.888082, lng: 10.182544 }}
+        title={"Station-1: Civil Protection"}
+        description={"Station-1"}
+      />
+      <Marker
+        position={{ lat: 36.893051, lng: 10.187858 }}
+        title={"Station-2: Technopole Ghazela"}
+        description={"Station-2"}
+      />
+      <Marker
+        position={{ lat: 36.876388, lng: 10.185943 }}
+        title={"Station-3: Fathi Zouhir Avenue"}
+        description={"Station-3"}
+      />
+      <Marker
+        position={{ lat: 36.900609, lng: 10.183929 }}
+        title={"Station-4: Ariana Soghra"}
+        description={"Station-4"}
+      />
+      <Marker
+        position={{ lat: 36.889589, lng: 10.171335 }}
+        title={"Station-5: Ghazela City"}
+        description={"Station-5"}
+      />
+      <Marker
+        position={{ lat: 36.910111, lng: 10.187838 }}
+        title={"Station-6: Nour Jaafer"}
+        description={"Station-6"}
+      />
+      <Marker
+        position={{ lat: 36.884352, lng: 10.194418 }}
+        title={"Station-7: Professors City"}
+        description={"Station-7"}
+      />
     </GoogleMap>
   )),
 );

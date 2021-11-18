@@ -138,7 +138,7 @@ function Login({ history }) {
                 hintText="At least 8 characters"
                 placeholder="Enter your password"
                 errorText="Your password is too short"
-                // id="password"
+                type="password"
                 name="LoginPassword"
                 inputprops={{
                   classes: {
@@ -162,23 +162,12 @@ function Login({ history }) {
                     //   LoginAdmin.User.length === 0 ||
                     //   LoginAdmin.Password.length === 0
                     // }
-                    onClick={
-                      () => {
-                        checkAdmin();
-                        if (adminLoggedIn) {
-                          history.push("/app/dashboard");
-                        }
+                    onClick={() => {
+                      checkAdmin();
+                      if (adminLoggedIn) {
+                        history.push("/app/dashboard");
                       }
-                      //   // () =>
-                      //   //   loginUser(
-                      //   //     userDispatch,
-                      //   //     loginValue,
-                      //   //     passwordValue,
-                      //   //     props.history,
-                      //   //     setIsLoading,
-                      //   //     setError,
-                      //   //   )
-                    }
+                    }}
                     variant="contained"
                     color="#FFBF00"
                     size="large"
