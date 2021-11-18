@@ -30,6 +30,7 @@
     "font-awesome": "^4.7.0",
     "material-ui-dropzone": "^3.5.0",
     "material-ui-icons": "^1.0.0-beta.36",
+    "material-ui-password-field": "^2.1.2",
     "moment": "^2.29.1",
     "mui-datatables": "^3.7.4",
     "react": "^16.14.0",

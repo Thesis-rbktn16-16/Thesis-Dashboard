@@ -67,7 +67,6 @@ function CreateStation() {
       ></TextField>
       <Button
         onClick={() => {
-          console.log(Station);
           axios
             .post("http://localhost:3000/station", Station)
             .then((result) => {

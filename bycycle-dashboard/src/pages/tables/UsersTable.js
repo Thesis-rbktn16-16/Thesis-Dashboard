@@ -22,7 +22,6 @@ export default function SuggestionTable() {
         return obj[key];
       });
   });
-  console.log(suggestionTable);
   const getAllUsers = () => {
     axios
       .get(`https://bycyclethesis.herokuapp.com/user/data`)

@@ -21,7 +21,6 @@ export default function SuggestionTable() {
         return obj[key];
       });
   });
-  console.log(suggestionTable);
   const getAllsuggestions = () => {
     axios
       .get(`https://bycyclethesis.herokuapp.com/suggestion`)
